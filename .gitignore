@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+.vscode/
+.idea/
+*.log
+
+# Secrets — never commit your API key
+.env
+
+# Personal / runtime data written by Sara (phone numbers, device MACs, photos, notes)
+.sara_*
+.captures_mailed
+captures/
+notes/
+contacts.json
+email_contacts.json
+run_out.txt
+
+# Large model weights (re-download with image-intelligence/scripts/download_models.py)
+image-intelligence/models/
+image-intelligence/uploads/*
+!image-intelligence/uploads/.gitkeep
+
+# Tooling / build output
+node_modules/
+.gradle/
+.qodo/

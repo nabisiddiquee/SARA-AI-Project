@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PhoneMicAI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0EA5E9</item>
+        <item name="colorPrimaryVariant">#0369A1</item>
+        <item name="colorOnPrimary">#04121A</item>
+        <item name="colorSecondary">#22D3EE</item>
+        <item name="android:statusBarColor">#0B1220</item>
+        <item name="android:windowBackground">#0B1220</item>
+    </style>
+
+    <style name="Label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textColor">#7DD3FC</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

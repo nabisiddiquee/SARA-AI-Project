@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Phone Mic AI</string>
+    <string name="subtitle">Use this phone as a live microphone for your laptop. No Wi-Fi needed.</string>
+    <string name="connection">CONNECTION</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="usb">USB cable</string>
+    <string name="laptop">LAPTOP (PAIRED)</string>
+    <string name="refresh">Refresh</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="status">STATUS</string>
+    <string name="stopped">Stopped</string>
+    <string name="hint_bluetooth">Pair the laptop once in Android Bluetooth settings, run `python main.py` on the laptop, then tap Start.</string>
+    <string name="hint_usb">Enable USB debugging, connect the cable, run `adb forward tcp:5000 tcp:5000` and `python main.py --transport usb` on the laptop, then tap Start.</string>
+</resources>

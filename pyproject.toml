@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-python-project"
+version = "0.1.0"
+description = "Starter Python project scaffold."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Your Name" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+]
+voice = [
+  "sounddevice>=0.4.7",
+  "vosk>=0.3.45",
+]
+camera = [
+  "opencv-python>=4.10",
+]
+web = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+]
+tts = [
+  "pyttsx3>=2.99",
+]
+neural = [
+  "edge-tts>=6",
+]
+time = [
+  "tzdata>=2024.1",
+]
+whatsapp = [
+  "pyautogui>=0.9.54",
+]
+notify = [
+  "winotify>=1.1.0",
+  # WhatsApp message alerts (read from the Windows notification centre).
+  "winrt-runtime>=3.2",
+  "winrt-Windows.ApplicationModel>=3.2",
+  "winrt-Windows.UI.Notifications>=3.2",
+  "winrt-Windows.UI.Notifications.Management>=3.2",
+]
+bluetooth = [
+  "winrt-runtime>=3.2",
+  "winrt-Windows.Devices.Enumeration>=3.2",
+  "winrt-Windows.Devices.Radios>=3.2",
+  "winrt-Windows.Foundation>=3.2",
+  "winrt-Windows.Foundation.Collections>=3.2",
+  "winrt-Windows.Media.Audio>=3.2",
+]
+ai = [
+  "anthropic>=0.40",
+]
+chatgpt = [
+  "openai>=1.0",
+]
+
+[project.scripts]
+my-python-project = "my_python_project.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

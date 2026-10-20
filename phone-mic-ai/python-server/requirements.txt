@@ -1,0 +1,18 @@
+# Core (Python 3.11+, Windows 10 2004+ / Windows 11)
+numpy>=1.26
+sounddevice>=0.4.6           # virtual-mic output + device listing
+
+# Bluetooth RFCOMM server via Windows' own Bluetooth stack (WinRT)
+winrt-runtime>=2.0
+winrt-Windows.Foundation>=2.0
+winrt-Windows.Foundation.Collections>=2.0
+winrt-Windows.Devices.Bluetooth>=2.0
+winrt-Windows.Devices.Bluetooth.Rfcomm>=2.0
+winrt-Windows.Networking>=2.0
+winrt-Windows.Networking.Sockets>=2.0
+winrt-Windows.Storage.Streams>=2.0
+
+# Optional: speech-to-text / AI (install only what you use)
+# vosk>=0.3.45               # --stt vosk     (offline)
+# faster-whisper>=1.0        # --stt whisper  (offline, more accurate)
+# openai>=1.40               # --stt openai / --ai openai (cloud)

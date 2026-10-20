@@ -1,0 +1,20 @@
+# --- Core (always needed) -----------------------------------------------
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9        # multipart/form-data uploads
+pydantic>=2.6
+numpy>=1.26
+opencv-python>=4.9,<5          # preprocessing, quality, Haar/YuNet faces, HOG persons, QR
+                               # (OpenCV 5 dropped the Haar data files and HOG people detector)
+                               # Keep ONE OpenCV package: if ultralytics/easyocr pull in another one,
+                               # see README "OpenCV conflict". pip check may warn that easyocr wants
+                               # opencv-python-headless; opencv-python provides the same cv2 module.
+Pillow>=10.3                   # validation, EXIF metadata, WEBP support
+
+# --- QR + barcodes (optional; OpenCV QR detector is used if missing) ----
+pyzbar>=0.1.9                  # Windows wheel bundles zbar; Linux: apt install libzbar0
+
+# --- AI models (optional but recommended; both pull in PyTorch CPU) -----
+easyocr>=1.7                   # OCR
+ultralytics>=8.2               # YOLO object + person detection
+pi-heif>=0.18                  # ultralytics asks for it at runtime; listed so it never auto-installs
